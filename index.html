@@ -1,172 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Onyx | CMMC Level 1 Readiness for Virginia Defense Subcontractors</title>
-<meta name="description" content="Onyx gets small Virginia DoD subcontractors CMMC Level 1 ready in about 21 days: written policies, an evidence binder and a guided SPRS affirmation. Free 20-minute fit check.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0d10;--panel:#12161b;--line:#232a33;--text:#e9ecef;--muted:#9aa4af;--gold:#c9a45c;--gold2:#e2c88e;--ok:#5fb98a;--max:1080px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--gold2)}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:5;background:rgba(11,13,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;text-decoration:none;color:var(--text)}
-.logo i{width:22px;height:22px;border-radius:50%;border:3px solid var(--gold);display:inline-block}
-.nav nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
-.nav nav a:hover{color:var(--text)}
-.btn{display:inline-block;background:var(--gold);color:#14110a;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background .15s}
-.btn:hover{background:var(--gold2)}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-.btn.ghost:hover{border-color:var(--gold)}
-.hero{padding:96px 0 72px;border-bottom:1px solid var(--line);background:radial-gradient(900px 400px at 80% -10%,rgba(201,164,92,.13),transparent 60%)}
-.eyebrow{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.12}
-h1{font-size:clamp(36px,5.4vw,62px);margin:14px 0 18px;max-width:14ch}
-.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch;margin:0 0 30px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:14px}
-.trust b{color:var(--text);font-weight:600}
-section{padding:80px 0;border-bottom:1px solid var(--line)}
-h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 14px}
-.sub{color:var(--muted);max-width:62ch;margin:0 0 36px}
-.grid{display:grid;gap:18px}
-.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
-.card h3{margin:0 0 8px;font-size:18px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.num{font-family:Fraunces,Georgia,serif;color:var(--gold);font-size:30px;line-height:1;margin-bottom:12px}
-.stat{font-family:Fraunces,Georgia,serif;font-size:44px;color:var(--gold2);line-height:1}
-.price{display:flex;flex-direction:column}
-.price .amt{font-family:Fraunces,Georgia,serif;font-size:40px;margin:6px 0 4px}
-.price .amt small{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);font-weight:400}
-.price ul{padding-left:18px;color:var(--muted);font-size:15px;margin:12px 0 0}
-.price.feature{border-color:var(--gold)}
-.tag{display:inline-block;font-size:12px;font-weight:600;color:#14110a;background:var(--gold);padding:3px 9px;border-radius:99px;align-self:flex-start}
-table{width:100%;border-collapse:collapse;font-size:15px}
-th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-th{color:var(--muted);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
-td:first-child{color:var(--gold);font-weight:600;width:40px}
-td:last-child{color:var(--muted)}
-.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
-details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:600}
-details p{color:var(--muted);margin:10px 0 0}
-.cta-band{text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(201,164,92,.14),transparent 70%)}
-.cta-band .ctas{justify-content:center}
-footer{padding:36px 0;color:var(--muted);font-size:14px}
-.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.note{font-size:13px;color:#7d8792;margin-top:14px}
-@media (max-width:860px){.g3,.g2{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:64px 0 52px}section{padding:60px 0}}
-</style>
-</head>
-<body>
+<meta content="Defined CMMC Level 1 readiness help for small Virginia DoD subcontractors: a $495 review credited toward fixed-price setup, evidence organization and client-owned affirmation." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<link href="https://onyxcmmc.com/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Onyx | Defined CMMC Level 1 readiness help" property="og:title"/>
+<meta content="https://onyxcmmc.com/" property="og:url"/>
+<script defer="" src="/assets/referral-request.js"></script>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3C/svg%3E" rel="icon"/>
+
+
+
+
+<link href="/assets/site-polish.css" rel="stylesheet"/><meta content="Defined CMMC Level 1 readiness help for small Virginia DoD subcontractors: a $495 review credited toward fixed-price setup, evidence organization and client-owned affirmation." property="og:description"/></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
 <header><div class="wrap nav">
-  <a class="logo" href="#"><i></i>ONYX</a>
-  <nav><a href="#why">Why it matters</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#checklist">Checklist</a><a href="#faq">FAQ</a></nav>
-  <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a>
+<a aria-label="Onyx home" class="logo" href="/"><i aria-hidden="true"></i>ONYX</a>
+<nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#checklist">Checklist</a><a href="#faq">FAQ</a></nav>
+<a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a>
 </div></header>
-
-<main>
+<main id="main">
 <div class="hero"><div class="wrap">
-  <div class="eyebrow">CMMC Level 1 readiness · Virginia</div>
-  <h1>CMMC Level 1, done in about 21 days.</h1>
-  <p class="lead">For small defense subcontractors who handle Federal Contract Information. We write your policies, build your evidence binder and walk you through the SPRS affirmation, so what you post holds up if anyone checks.</p>
-  <div class="ctas">
-    <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a>
-    <a class="btn ghost" href="#checklist">See the Level 1 checklist</a>
-  </div>
-  <div class="trust"><span><b>15</b> requirements, plain English</span><span><b>Fixed</b> prices, no hourly billing</span><span><b>You keep</b> everything we build</span></div>
+<div class="eyebrow">CMMC Level 1 readiness · Virginia</div>
+<h1>Level 1 readiness, with a clear finish line.</h1>
+<p class="lead">For small Virginia defense subcontractors. We help review scope, track gaps and organize evidence. Your technical provider handles agreed system changes; your senior official reviews and makes the SPRS affirmation.</p>
+<div class="ctas">
+<a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a>
+<a class="btn ghost" data-onyx-inquiry="" href="/readiness-review/">See scope, prices &amp; a sample</a>
+</div>
+<div class="trust"><span><b>15</b> requirements, plain English</span><span><b>Fixed</b> prices, no hourly billing</span><span><b>You keep</b> everything we build</span></div>
 </div></div>
-
 <section id="why"><div class="wrap">
-  <div class="eyebrow">Why it matters</div>
-  <h2>The affirmation is signed by someone at your company.</h2>
-  <p class="sub">Level 1 is a yearly self-assessment. A senior official at your company affirms the result in SPRS, and the evidence has to back it up for six years. Most small shops already do most of the 15 requirements. The gap is usually the paperwork.</p>
-  <div class="grid g3">
-    <div class="card"><div class="stat">$507,144</div><p style="margin-top:10px">What LOGZONE paid to settle False Claims Act allegations. It had posted a perfect self-score of 110; a 2024 DIBCAC review found -170. No admission of liability.</p></div>
-    <div class="card"><div class="stat">1 year</div><p style="margin-top:10px">How long a Level 1 self-assessment lasts. It expires one year after it's done, with no reminder.</p></div>
-    <div class="card"><div class="stat">0</div><p style="margin-top:10px">Items Level 1 lets you leave for later. All 15 must be met. There's no plan-of-action allowance at Level 1.</p></div>
-  </div>
+<div class="eyebrow">Why it matters</div>
+<h2>The affirmation is signed by someone at your company.</h2>
+<p class="sub">A readiness engagement should identify what has been reviewed, what remains unknown and who owns each action. Documents alone do not establish that safeguards are implemented. We prepare and guide; your company remains responsible for its assessment and affirmation.</p>
+<div class="grid g3">
+<div class="card"><div class="stat">Clear scope</div><p style="margin-top:10px">Review the deliverables, technical responsibilities and exclusions before you commit. No promise of government acceptance or a contract award.</p></div>
+<div class="card"><div class="stat">Your IT stays</div><p style="margin-top:10px">Your technical provider retains responsibility for agreed system changes and ongoing support. We do not hide an IT retainer inside a setup fee.</p></div>
+<div class="card"><div class="stat">Evidence first</div><p style="margin-top:10px">Unresolved gaps stay visible. A completed documentation package is not a certification or permission to affirm unsupported results.</p></div>
+</div>
 </div></section>
-
 <section id="how"><div class="wrap">
-  <div class="eyebrow">How it works</div>
-  <h2>Three steps. About 21 days.</h2>
-  <p class="sub">Your IT person, if you have one, stays. We handle the written side: the policies, the proof and the affirmation.</p>
-  <div class="grid g3">
-    <div class="card"><div class="num">01</div><h3>Fit check</h3><p>A free 20-minute call. We confirm whether Level 1 applies to your work and where you stand on the 15 requirements.</p></div>
-    <div class="card"><div class="num">02</div><h3>Build</h3><p>We write your policies and assemble an evidence binder for every requirement: screenshots, logs and records, organized the way a reviewer would ask for them.</p></div>
-    <div class="card"><div class="num">03</div><h3>Affirm</h3><p>We walk your senior official through the SPRS affirmation and help you put together proof of your status for your prime.</p></div>
-  </div>
+<div class="eyebrow">How it works</div>
+<h2>Three steps. One agreed scope.</h2>
+<p class="sub">The setup target is 21 days after agreed payment, access and inputs are ready. Client delays pause the clock; technical gaps may change the plan. This is not a guaranteed compliance deadline.</p>
+<div class="grid g3">
+<div class="card"><div class="num">01</div><h3>Fit check</h3><p>A free 20-minute call to discuss your work and whether our service fits. This is not a full technical assessment. Scope is reviewed before setup.</p></div>
+<div class="card"><div class="num">02</div><h3>Build</h3><p>Within the agreed scope, we prepare documentation, organize the available evidence and track unresolved gaps with their responsible owners.</p></div>
+<div class="card"><div class="num">03</div><h3>Affirm</h3><p>We guide the process and hand over the agreed readiness materials. Your senior official reviews and makes any required SPRS affirmation; Onyx does not sign as that official.</p></div>
+</div>
 </div></section>
-
 <section id="pricing"><div class="wrap">
-  <div class="eyebrow">Pricing</div>
-  <h2>Fixed prices, agreed up front.</h2>
-  <p class="sub">The readiness check is credited in full toward setup.</p>
-  <div class="grid g3">
-    <div class="card price"><h3>Readiness check</h3><div class="amt">$495</div><p>Where you stand on all 15 requirements and exactly what's missing.</p><ul><li>Credited toward setup</li><li>Written gap list</li></ul></div>
-    <div class="card price feature"><span class="tag">Most shops</span><h3 style="margin-top:10px">Level 1 setup</h3><div class="amt">$3,500 <small>1–10 people</small></div><div class="amt" style="font-size:28px;margin-top:0">$4,500 <small>11–25 people</small></div><ul><li>Written policies</li><li>Evidence binder</li><li>Guided SPRS affirmation</li><li>About 21 days</li></ul></div>
-    <div class="card price"><h3>Yearly renewal</h3><div class="amt">$750 <small>/ year</small></div><p>The annual re-assessment, binder update and affirmation, before your current one expires.</p></div>
-  </div>
+<div class="eyebrow">Pricing</div>
+<h2>Fixed prices, agreed up front.</h2>
+<p class="sub">The $495 readiness review is credited in full toward setup: $3,005 remains on a $3,500 setup, or $4,005 on a $4,500 setup. It is not an additional fee on top.</p>
+<div class="grid g3">
+<div class="card price"><h3>Readiness review</h3><div class="amt">$495</div><p>A review of the agreed scope and available information, with a written gap summary and next steps.</p><ul><li>Credited toward setup</li><li>Written gap list</li></ul></div>
+<div class="card price feature"><span class="tag">Defined engagement</span><h3 style="margin-top:10px">Level 1 setup</h3><div class="amt">$3,500 <small>1–10 people</small></div><div class="amt" style="font-size:28px;margin-top:0">$4,500 <small>11–25 people</small></div><ul><li>Written policies</li><li>Evidence binder</li><li>Guided SPRS affirmation</li><li>21-day target, subject to scope and client inputs</li></ul></div>
+<div class="card price"><h3>Optional annual review</h3><div class="amt">$750 <small>/ year</small></div><p>One scheduled readiness review, an updated gap summary and guidance. Separately authorized; not unlimited support or ongoing IT management.</p></div>
+</div>
+<p class="note">Hardware, licenses, Level 2/CUI work and ongoing IT support are excluded. <a data-onyx-inquiry="" href="/readiness-review/">Review the full scope and sample deliverable.</a></p>
 </div></section>
-
 <section id="checklist"><div class="wrap">
-  <div class="eyebrow">Free resource</div>
-  <h2>The Level 1 checklist</h2>
-  <p class="sub">The 15 safeguarding requirements from FAR 52.204-21, in plain English, with what you'd show as proof. Check each one you could prove today.</p>
-  <div class="tablewrap"><table>
-    <thead><tr><th>#</th><th>Requirement</th><th>What you'd show</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td>Only authorized people and devices get onto company systems</td><td>A current list of users and company devices</td></tr>
-      <tr><td>2</td><td>People can only do what their role needs</td><td>Who has admin rights, and why</td></tr>
-      <tr><td>3</td><td>Control connections to outside systems</td><td>A short rule on personal devices and outside accounts</td></tr>
-      <tr><td>4</td><td>Nothing from contracts gets posted publicly</td><td>Who approves website and social posts</td></tr>
-      <tr><td>5</td><td>Every user and device is identified</td><td>No shared logins; one account per person</td></tr>
-      <tr><td>6</td><td>Verify identity before access</td><td>Password or sign-in settings</td></tr>
-      <tr><td>7</td><td>Wipe or destroy media before disposal or reuse</td><td>Disposal log or shredding receipts</td></tr>
-      <tr><td>8</td><td>Limit physical access to equipment and work areas</td><td>Locked areas and who has keys</td></tr>
-      <tr><td>9</td><td>Escort visitors, log visits, manage keys and badges</td><td>Visitor log and key list</td></tr>
-      <tr><td>10</td><td>Protect the network edge</td><td>Firewall or router settings</td></tr>
-      <tr><td>11</td><td>Keep public-facing systems separate from internal ones</td><td>Guest Wi-Fi or website hosted apart from office systems</td></tr>
-      <tr><td>12</td><td>Find and fix security flaws promptly</td><td>Update and patch history</td></tr>
-      <tr><td>13</td><td>Antivirus protection is in place</td><td>Antivirus on every device</td></tr>
-      <tr><td>14</td><td>Antivirus stays updated</td><td>Auto-update turned on</td></tr>
-      <tr><td>15</td><td>Scan regularly, including downloads and attachments</td><td>Scan settings or a recent scan report</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">Source: <a href="https://www.acquisition.gov/far/52.204-21">FAR 52.204-21(b)(1)</a>. General guidance, not legal advice.</p>
+<div class="eyebrow">Free resource</div>
+<h2>The Level 1 checklist</h2>
+<p class="sub">The 15 safeguarding requirements from FAR 52.204-21, in plain English, with what you'd show as proof. Check each one you could prove today.</p>
+<div aria-label="Details table, horizontally scrollable" class="tablewrap" role="region" tabindex="0"><table>
+<thead><tr><th scope="col">#</th><th scope="col">Requirement</th><th scope="col">What you'd show</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Only authorized users, processes and devices access covered systems</td><td>A current list of users and company devices</td></tr>
+<tr><td>2</td><td>People can only do what their role needs</td><td>Who has admin rights, and why</td></tr>
+<tr><td>3</td><td>Control connections to outside systems</td><td>Documented rules and evidence of implemented connection controls</td></tr>
+<tr><td>4</td><td>Control information on publicly accessible systems</td><td>Who approves website and social posts</td></tr>
+<tr><td>5</td><td>Identify users, processes acting for users, and devices</td><td>Account and device identifiers tied to authorized use</td></tr>
+<tr><td>6</td><td>Verify identity before access</td><td>Password or sign-in settings</td></tr>
+<tr><td>7</td><td>Wipe or destroy media before disposal or reuse</td><td>Disposal log or shredding receipts</td></tr>
+<tr><td>8</td><td>Limit physical access to equipment and work areas</td><td>Locked areas and who has keys</td></tr>
+<tr><td>9</td><td>Escort visitors, log visits, manage keys and badges</td><td>Visitor log and key list</td></tr>
+<tr><td>10</td><td>Protect external and key internal communication boundaries</td><td>Firewall or router settings</td></tr>
+<tr><td>11</td><td>Keep public-facing systems separate from internal ones</td><td>Evidence of physical or logical separation for public-facing system components</td></tr>
+<tr><td>12</td><td>Identify, report and correct security flaws promptly</td><td>Update and patch history</td></tr>
+<tr><td>13</td><td>Malicious-code protection is in place where appropriate</td><td>Protection coverage for the relevant in-scope environment</td></tr>
+<tr><td>14</td><td>Antivirus stays updated</td><td>Auto-update turned on</td></tr>
+<tr><td>15</td><td>Scan periodically and scan external files when downloaded, opened or executed</td><td>Scan settings or a recent scan report</td></tr>
+</tbody>
+</table></div>
+<p class="note">Illustrative evidence examples—not a complete assessment, mandatory document list or proof of compliance. Source: <a href="https://www.acquisition.gov/far/52.204-21">FAR 52.204-21(b)(1)</a>. General guidance, not legal advice.</p>
 </div></section>
-
 <section id="faq"><div class="wrap">
-  <div class="eyebrow">FAQ</div>
-  <h2>Common questions</h2>
-  <details><summary>Does Level 1 apply to my company?</summary><p>Level 1 applies when you handle Federal Contract Information on a DoD contract or subcontract. We confirm this on the fit check by looking at your work and your contract language.</p></details>
-  <details><summary>What if we receive CUI, like controlled drawings or specs?</summary><p>Then you likely need Level 2, which is a larger project. We'll tell you on the fit check and refer you to a qualified Level 2 partner.</p></details>
-  <details><summary>Do you replace our IT person or provider?</summary><p>No. Your IT stays responsible for the technical side. We handle the written side: policies, evidence and the affirmation, and we coordinate with your IT where needed.</p></details>
-  <details><summary>Is this a certification?</summary><p>Level 1 is a self-assessment that your company affirms in SPRS. We prepare you and your evidence so the affirmation is accurate and supported. We don't issue certifications, and no one can guarantee a contract award.</p></details>
-  <details><summary>Our prime asked for our "SPRS score." What do we send?</summary><p>Level 1 has no score, only met or not met. Primes usually want your CMMC unique ID, status date and CAGE code, plus a screenshot of your affirmed Level 1 entry. Ask your prime what format they want; we help you put it together.</p></details>
+<div class="eyebrow">FAQ</div>
+<h2>Common questions</h2>
+<details><summary>Does Level 1 apply to my company?</summary><p>The relevant information, systems and contract requirements determine the scope—not employee count alone. We discuss fit first and identify what needs further review before setup.</p></details>
+<details><summary>What if we receive CUI, like controlled drawings or specs?</summary><p>Level 2/CUI work is excluded from this offer. We identify that scope limitation and discuss an appropriate separate provider; we do not ask you to upload CUI to this site.</p></details>
+<details><summary>Do you replace our IT person or provider?</summary><p>No. Your technical provider stays responsible for agreed technical changes and ongoing support. We coordinate preparation and evidence within scope; your senior official owns the affirmation.</p></details>
+<details><summary>Is this a certification?</summary><p>Onyx provides preparation and guidance, not official certification. The client reviews the underlying assessment and makes the affirmation. We do not guarantee compliance outcomes, acceptance or contract awards.</p></details>
+<details><summary>Our prime asked for our "SPRS score." What do we send?</summary><p>Ask which specific assessment or record the request concerns before sending anything. We can help organize the relevant request and record within scope; do not post contract documents or account credentials in a public inquiry.</p></details>
 </div></section>
-
 <section class="cta-band"><div class="wrap">
-  <h2>Find out where you stand in 20 minutes.</h2>
-  <p class="sub" style="margin:0 auto 28px">Free, no obligation. If you're already covered, we'll tell you.</p>
-  <div class="ctas"><a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a><a class="btn ghost" href="tel:+17033002469">Call 703-300-2469</a></div>
+<h2>Start with a 20-minute Fit Call.</h2>
+<p class="sub" style="margin:0 auto 28px">Free, no obligation. Discuss the proposed scope and whether outside help would be useful.</p>
+<div class="ctas"><a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a><a class="btn ghost" href="tel:+17033002469">Call 703-300-2469</a></div>
 </div></section>
 </main>
-
 <footer><div class="wrap foot">
-  <div><b style="color:var(--text);letter-spacing:.14em">ONYX</b><br>CMMC Level 1 readiness for Virginia defense subcontractors.<br>Onyx is a trade name of ETaye LLC.</div>
-  <div>Ezra Taye<br><a href="tel:+17033002469">703-300-2469</a> · <a href="mailto:ezra@onyxcmmc.com">ezra@onyxcmmc.com</a><br>3100 Clarendon Blvd, Arlington, VA 22201</div>
+<div><b style="color:var(--text);letter-spacing:.14em">ONYX</b><br/>CMMC Level 1 readiness for Virginia defense subcontractors.<br/>Onyx is a trade name of ETaye LLC.</div>
+<div>Ezra Taye<br/><a href="tel:+17033002469">703-300-2469</a> · <a href="mailto:ezra@onyxcmmc.com">ezra@onyxcmmc.com</a><br/>3100 Clarendon Blvd, Arlington, VA 22201</div>
 </div>
-<div class="wrap note">Guides: <a href="/cmmc-level-1-self-assessment/">Level 1 self-assessment</a> · <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> · <a href="/sprs-level-1-affirmation/">SPRS affirmation</a> · <a href="/cmmc-level-1-cost/">Level 1 cost</a> · <a href="/cmmc-status-2026/">CMMC status 2026</a></div>
+<div class="wrap note"><a data-onyx-inquiry="" href="/readiness-review/">Service scope, sample &amp; contact</a> · Guides: <a href="/cmmc-level-1-self-assessment/">Level 1 self-assessment</a> · <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> · <a href="/sprs-level-1-affirmation/">SPRS affirmation</a> · <a href="/cmmc-level-1-cost/">Level 1 cost</a> · <a href="/cmmc-status-2026/">CMMC status 2026</a></div>
 </footer>
 </body>
 </html>

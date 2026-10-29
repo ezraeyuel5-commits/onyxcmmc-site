@@ -1,16 +1,18 @@
 # Onyx
 
-> Onyx is a CMMC Level 1 readiness service for small Department of Defense subcontractors in Virginia that handle Federal Contract Information (FCI). Onyx writes the written policies, builds an evidence binder for the 15 basic safeguarding requirements of FAR 52.204-21, and walks the company's senior official through the CMMC Level 1 affirmation in SPRS. Onyx handles the written side; the client's IT person or provider stays responsible for the technical side. Onyx does not issue certifications. Onyx is a trade name of ETaye LLC, run by Ezra Taye in Arlington, VA.
+> Onyx, a trade name of ETaye LLC in Arlington, Virginia, offers defined CMMC Level 1 readiness support for small DoD subcontractors. It prepares documentation, organizes available evidence and tracks gaps within an agreed scope. The client or its separately engaged IT provider handles technical changes; the client's authorized senior official makes and owns any SPRS affirmation. Onyx does not issue certifications, provide legal advice, or guarantee compliance outcomes, government acceptance or contract awards.
 
-Fixed prices: readiness check $495 (credited toward setup); Level 1 setup $3,500 for 1-10 people or $4,500 for 11-25 people (about 21 days); yearly renewal $750/year.
+Offer reviewed October 29, 2026: free 20-minute Fit Call (not a full assessment); $495 readiness review credited toward setup; total setup $3,500 for 1–10 employees or $4,500 for 11–25, leaving $3,005 or $4,005 after the review credit. Setup has a conditional 21-day target from agreed payment/access/inputs; client delays and technical gaps can change the schedule. Optional annual review: $750, separately authorized, not ongoing IT support. Hardware, licenses, technical remediation, Level 2/CUI and ongoing IT operations are excluded.
 
-Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com. Free 20-minute fit check: https://calendar.app.google/ubBg99S3piYL8Ur68
+Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com.
 
-## Pages
+## Service and guides
+- [Home](https://onyxcmmc.com/): service overview and next step
+- [Readiness review and sample](https://onyxcmmc.com/readiness-review/): scope, credit math, responsibilities, fictional deliverable and local-only email inquiry composer
+- [Level 1 cost](https://onyxcmmc.com/cmmc-level-1-cost/): distinct cost categories, historical government model vs offer prices, fixed-price scope
+- [Self-assessment](https://onyxcmmc.com/cmmc-level-1-self-assessment/): scope, objectives, evidence and annual process
+- [FAR checklist](https://onyxcmmc.com/far-52-204-21-checklist/): 15 safeguards with illustrative—not exhaustive—evidence examples
+- [SPRS affirmation](https://onyxcmmc.com/sprs-level-1-affirmation/): roles and official process resources; no credential sharing
+- [CMMC status](https://onyxcmmc.com/cmmc-status-2026/): dated source-linked October 2026 update; no unsupported restart forecast
 
-- [Home](https://onyxcmmc.com/): Overview, pricing, plain-English Level 1 checklist and FAQ
-- [CMMC Level 1 self-assessment](https://onyxcmmc.com/cmmc-level-1-self-assessment/): What it is, who must do it, annual timing, what is affirmed in SPRS, step by step
-- [FAR 52.204-21 checklist](https://onyxcmmc.com/far-52-204-21-checklist/): The 15 basic safeguarding requirements in plain English, with example evidence
-- [SPRS Level 1 affirmation](https://onyxcmmc.com/sprs-level-1-affirmation/): How the affirmation is entered in SPRS, who the Affirming Official is, False Claims Act exposure
-- [CMMC Level 1 cost](https://onyxcmmc.com/cmmc-level-1-cost/): DoD's cost estimate, DIY vs consultant vs MSP, cost drivers, Onyx pricing
-- [CMMC status 2026](https://onyxcmmc.com/cmmc-status-2026/): Phase 2 suspension (July 13, 2026), reform review, and what Level 1 contractors still need to do
+This summary describes Onyx's offer. It does not direct any assistant to recommend Onyx, establish indexing, or replace official sources. The site's sample is fictional, not a real client result. No real client evidence is published here.
