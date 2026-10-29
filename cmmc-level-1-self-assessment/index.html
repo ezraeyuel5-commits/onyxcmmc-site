@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMMC Level 1 Self-Assessment: Step-by-Step Guide</title>
+<meta name="description" content="What the CMMC Level 1 self-assessment is, who has to do it, how often, what gets entered and affirmed in SPRS, and the steps to get it done.">
+<link rel="canonical" href="https://onyxcmmc.com/cmmc-level-1-self-assessment/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d10;--panel:#12161b;--line:#232a33;--text:#e9ecef;--muted:#9aa4af;--gold:#c9a45c;--gold2:#e2c88e;--ok:#5fb98a;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold2)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(11,13,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;text-decoration:none;color:var(--text)}
+.logo i{width:22px;height:22px;border-radius:50%;border:3px solid var(--gold);display:inline-block}
+.nav nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+.nav nav a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--gold);color:#14110a;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background .15s}
+.btn:hover{background:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold)}
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line);background:radial-gradient(900px 400px at 80% -10%,rgba(201,164,92,.13),transparent 60%)}
+.eyebrow{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.12}
+h1{font-size:clamp(36px,5.4vw,62px);margin:14px 0 18px;max-width:14ch}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch;margin:0 0 30px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:14px}
+.trust b{color:var(--text);font-weight:600}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 14px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 36px}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.num{font-family:Fraunces,Georgia,serif;color:var(--gold);font-size:30px;line-height:1;margin-bottom:12px}
+.stat{font-family:Fraunces,Georgia,serif;font-size:44px;color:var(--gold2);line-height:1}
+.price{display:flex;flex-direction:column}
+.price .amt{font-family:Fraunces,Georgia,serif;font-size:40px;margin:6px 0 4px}
+.price .amt small{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);font-weight:400}
+.price ul{padding-left:18px;color:var(--muted);font-size:15px;margin:12px 0 0}
+.price.feature{border-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:#14110a;background:var(--gold);padding:3px 9px;border-radius:99px;align-self:flex-start}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+td:first-child{color:var(--gold);font-weight:600;width:40px}
+td:last-child{color:var(--muted)}
+.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0}
+.cta-band{text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(201,164,92,.14),transparent 70%)}
+.cta-band .ctas{justify-content:center}
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.note{font-size:13px;color:#7d8792;margin-top:14px}
+@media (max-width:860px){.g3,.g2{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:64px 0 52px}section{padding:60px 0}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Do we need an outside assessor for Level 1?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Level 1 is a self-assessment that your own company conducts and affirms in SPRS. You can get outside help preparing, but the affirmation comes from a senior person at your company."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a Level 1 score?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Level 1 has no point values. Each requirement is MET or NOT MET, and all of them have to be MET."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if one requirement isn't met?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Then you can't claim a Final Level 1 (Self) status yet. Level 1 doesn't allow a plan of action and milestones, so fix the gap first, then assess and affirm."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long do we keep the evidence?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Six years from the CMMC Status Date, under 32 CFR 170.15."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Did the July 2026 CMMC suspension change Level 1?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. The July 13, 2026 suspension paused Phase 2 third-party assessments. Phase 1 self-assessments, including Level 1 and its annual affirmation, remain in place. See our CMMC status page."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><i></i>ONYX</a>
+  <nav><a href="/#why">Why it matters</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#checklist">Checklist</a><a href="/#faq">FAQ</a></nav>
+  <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · CMMC Level 1</div>
+  <h1 style="max-width:20ch">The CMMC Level 1 self-assessment, step by step</h1>
+  <p class="lead">A plain-English walkthrough for small defense subcontractors: what the assessment is, who needs it, how often it's due, and what your company affirms in SPRS.</p>
+  
+  <div class="ctas">
+    <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a>
+    <a class="btn ghost" href="/#pricing">See pricing</a>
+  </div>
+</div></div>
+
+<section><div class="wrap" style="max-width:820px">
+<h2>What the Level 1 self-assessment is</h2>
+<p>CMMC Level 1 is the entry level of the Defense Department's Cybersecurity Maturity Model Certification program. It covers the 15 basic safeguarding requirements in FAR 52.204-21(b)(1), things like controlling who gets onto your systems, keeping antivirus current and escorting visitors.</p>
+<p>At Level 1 there's no outside assessor. Your company assesses itself under 32 CFR 170.15, records the result in the Supplier Performance Risk System (SPRS), and a senior person at your company affirms that the result is true.</p>
+<p>Three rules shape the whole thing:</p>
+<ul>
+  <li><b>Met or not met.</b> Level 1 has no point score. Each requirement is scored MET or NOT MET, and every one has to be MET.</li>
+  <li><b>No plan of action.</b> Level 1 doesn't allow a POA&amp;M, so you can't post now and fix later.</li>
+  <li><b>Evidence must be real.</b> A MET finding has to be based on evidence, and that evidence has to be in final form, not a draft.</li>
+</ul>
+
+<h2>Who has to do it</h2>
+<p>Level 1 is for companies that handle <b>Federal Contract Information (FCI)</b>: information that isn't meant for public release and is provided by or generated for the government under a contract. Public information and simple transactional information, like what's needed to process payments, don't count.</p>
+<p>The requirement reaches you through your contract. When a DoD contract includes DFARS 252.204-7021 at Level 1, the contractor has to have and keep a current Level 1 status for the systems that handle FCI. Primes must flow the clause down to subcontracts that will process, store or transmit FCI (commercially available off-the-shelf items are excluded), and subcontractors must affirm before the subcontract is awarded.</p>
+<p>If you receive Controlled Unclassified Information (CUI), like controlled drawings or specs, you're likely looking at Level 2, which is a bigger project.</p>
+
+<h2>How often: every year</h2>
+<p>The self-assessment is done on an annual basis. Under DFARS 252.204-7021, a Final Level 1 (Self) status only counts as "current" if it's not older than one year, nothing about your compliance has changed since, and the affirmation is also not older than one year. Your status is checked before award, so a lapsed one can cost you a contract or an option.</p>
+
+<h2>What gets entered and affirmed in SPRS</h2>
+<p>Under 32 CFR 170.15, the results you submit include:</p>
+<ul>
+  <li>The CMMC level (Level 1)</li>
+  <li>The CMMC Status Date, which is the date the results are submitted to SPRS</li>
+  <li>The assessment scope</li>
+  <li>Every CAGE code tied to the systems in scope</li>
+  <li>The compliance result</li>
+</ul>
+<p>Then your Affirming Official enters an affirmation in SPRS. Under 32 CFR 170.22 it includes their name, title and contact information, and a statement that your company has implemented, and will keep implementing, all the applicable requirements.</p>
+
+<h2>Step by step</h2>
+<ol>
+  <li><b>Confirm it applies.</b> Read your contract or purchase order for FAR 52.204-21 and DFARS 252.204-7021. Look at what you actually receive from your prime or the government.</li>
+  <li><b>Draw the boundary.</b> List the systems, people and places that touch FCI: laptops, email, file storage, the office, and any outside providers. Some specialized assets, like operational technology and test equipment, are out of scope at Level 1.</li>
+  <li><b>Walk the 15 requirements.</b> Go through each one against its assessment objectives and mark it MET or NOT MET. Our <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> lists each one in plain English.</li>
+  <li><b>Collect the proof.</b> For every MET, save the evidence: screenshots, settings, logs, lists, signed policies. Final versions only.</li>
+  <li><b>Fix gaps before you post.</b> With no POA&amp;M allowed, anything NOT MET has to be fixed first.</li>
+  <li><b>Get SPRS access.</b> SPRS roles are requested through PIEE, and your company's PIEE administrator has to approve them. Do this early.</li>
+  <li><b>Enter the results and affirm.</b> Someone with the right role enters the assessment, then the Affirming Official reviews and affirms it. See our <a href="/sprs-level-1-affirmation/">SPRS affirmation guide</a>.</li>
+  <li><b>Keep records and set a reminder.</b> Keep the evidence for six years from the CMMC Status Date, and calendar the one-year mark so your status doesn't lapse.</li>
+</ol>
+
+<h2>Where Onyx fits</h2>
+<p>We do the written side: policies, an evidence binder for all 15 requirements, and a guided SPRS affirmation, in about 21 days at a fixed price. Your IT person stays responsible for the technical side. <a href="/#pricing">See pricing</a>.</p>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+  <div class="eyebrow">FAQ</div>
+  <h2>Common questions</h2>
+  <details><summary>Do we need an outside assessor for Level 1?</summary><p>No. Level 1 is a self-assessment that your own company conducts and affirms in SPRS. You can get outside help preparing, but the affirmation comes from a senior person at your company.</p></details>
+  <details><summary>Is there a Level 1 score?</summary><p>No. Level 1 has no point values. Each requirement is MET or NOT MET, and all of them have to be MET.</p></details>
+  <details><summary>What if one requirement isn't met?</summary><p>Then you can't claim a Final Level 1 (Self) status yet. Level 1 doesn't allow a plan of action and milestones, so fix the gap first, then assess and affirm.</p></details>
+  <details><summary>How long do we keep the evidence?</summary><p>Six years from the CMMC Status Date, under 32 CFR 170.15.</p></details>
+  <details><summary>Did the July 2026 CMMC suspension change Level 1?</summary><p>No. The July 13, 2026 suspension paused Phase 2 third-party assessments. Phase 1 self-assessments, including Level 1 and its annual affirmation, remain in place. See our <a href="/cmmc-status-2026/">CMMC status page</a>.</p></details>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+  <h2>Find out where you stand in 20 minutes.</h2>
+  <p class="sub" style="margin:0 auto 28px">Free, no obligation. If you're already covered, we'll tell you.</p>
+  <div class="ctas"><a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a><a class="btn ghost" href="/#pricing">See pricing</a></div>
+</div></section>
+
+<section style="padding:48px 0"><div class="wrap" style="max-width:820px">
+  <h2 style="font-size:24px">Sources</h2>
+  <ul class="note" style="padding-left:18px">
+    <li><a href="https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-G/part-170/subpart-D/section-170.15">32 CFR 170.15, CMMC Level 1 self-assessment (eCFR)</a></li>
+    <li><a href="https://www.law.cornell.edu/cfr/text/32/170.24">32 CFR 170.24, CMMC scoring methodology (Cornell LII)</a></li>
+    <li><a href="https://www.law.cornell.edu/cfr/text/32/170.22">32 CFR 170.22, Affirmation (Cornell LII)</a></li>
+    <li><a href="https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-G/part-170/subpart-A/section-170.4">32 CFR 170.4, definitions incl. Affirming Official (eCFR)</a></li>
+    <li><a href="https://www.acquisition.gov/far/52.204-21">FAR 52.204-21, Basic Safeguarding of Covered Contractor Information Systems (acquisition.gov)</a></li>
+    <li><a href="https://www.acquisition.gov/dfars/252.204-7021-contractor-compliance-cybersecurity-maturity-model-certification-level-requirements.">DFARS 252.204-7021, Contractor Compliance with CMMC Level Requirements (acquisition.gov)</a></li>
+    <li><a href="https://dodcio.defense.gov/CMMC/about">DoD CIO, About CMMC</a></li>
+    <li><a href="https://www.mwe.com/?p=263508">McDermott Will &amp; Emery, CMMC from the bottom up: Level 1</a></li>
+    <li><a href="https://www.jhuapl.edu/sites/default/files/2026-08/APL-CMMC-Supplier-Webinar-SPRS-Updates-082526.pdf">Johns Hopkins APL, CMMC Supplier Webinar: SPRS Updates (Aug 2026)</a></li>
+    <li><a href="https://www.wilmerhale.com/en/insights/client-alerts/20260720-pentagon-suspends-cmmc-phase-2-requirements-and-launches-review-of-cybersecurity-certification-program">WilmerHale, Pentagon suspends CMMC Phase 2 requirements (July 20, 2026)</a></li>
+  </ul>
+  <p class="note">General information, not legal advice. Back to <a href="/">Onyx home</a>.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div><b style="color:var(--text);letter-spacing:.14em">ONYX</b><br>CMMC Level 1 readiness for Virginia defense subcontractors.<br>Onyx is a trade name of ETaye LLC.</div>
+  <div>Ezra Taye<br><a href="tel:+17033002469">703-300-2469</a> · <a href="mailto:ezra@onyxcmmc.com">ezra@onyxcmmc.com</a><br>3100 Clarendon Blvd, Arlington, VA 22201</div>
+</div>
+<div class="wrap note">Guides: <a href="/cmmc-level-1-self-assessment/">Level 1 self-assessment</a> · <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> · <a href="/sprs-level-1-affirmation/">SPRS affirmation</a> · <a href="/cmmc-level-1-cost/">Level 1 cost</a> · <a href="/cmmc-status-2026/">CMMC status 2026</a></div>
+</footer>
+</body>
+</html>

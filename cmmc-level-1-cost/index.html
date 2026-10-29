@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMMC Level 1 Cost: Honest Ranges for Small Shops</title>
+<meta name="description" content="What CMMC Level 1 actually costs a small DoD subcontractor: DoD's own estimate, DIY vs consultant vs MSP, what drives cost, and Onyx's fixed prices.">
+<link rel="canonical" href="https://onyxcmmc.com/cmmc-level-1-cost/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d10;--panel:#12161b;--line:#232a33;--text:#e9ecef;--muted:#9aa4af;--gold:#c9a45c;--gold2:#e2c88e;--ok:#5fb98a;--max:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold2)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(11,13,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;text-decoration:none;color:var(--text)}
+.logo i{width:22px;height:22px;border-radius:50%;border:3px solid var(--gold);display:inline-block}
+.nav nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+.nav nav a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--gold);color:#14110a;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background .15s}
+.btn:hover{background:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold)}
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line);background:radial-gradient(900px 400px at 80% -10%,rgba(201,164,92,.13),transparent 60%)}
+.eyebrow{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.12}
+h1{font-size:clamp(36px,5.4vw,62px);margin:14px 0 18px;max-width:14ch}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch;margin:0 0 30px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:14px}
+.trust b{color:var(--text);font-weight:600}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(28px,3.6vw,40px);margin:8px 0 14px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 36px}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.num{font-family:Fraunces,Georgia,serif;color:var(--gold);font-size:30px;line-height:1;margin-bottom:12px}
+.stat{font-family:Fraunces,Georgia,serif;font-size:44px;color:var(--gold2);line-height:1}
+.price{display:flex;flex-direction:column}
+.price .amt{font-family:Fraunces,Georgia,serif;font-size:40px;margin:6px 0 4px}
+.price .amt small{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);font-weight:400}
+.price ul{padding-left:18px;color:var(--muted);font-size:15px;margin:12px 0 0}
+.price.feature{border-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:#14110a;background:var(--gold);padding:3px 9px;border-radius:99px;align-self:flex-start}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+td:first-child{color:var(--gold);font-weight:600;width:40px}
+td:last-child{color:var(--muted)}
+.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0}
+.cta-band{text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(201,164,92,.14),transparent 70%)}
+.cta-band .ctas{justify-content:center}
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.note{font-size:13px;color:#7d8792;margin-top:14px}
+@media (max-width:860px){.g3,.g2{grid-template-columns:1fr}.nav nav{display:none}.hero{padding:64px 0 52px}section{padding:60px 0}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is DoD's $6,000 estimate what we'll pay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not necessarily. It's DoD's estimate of the assessment work for a small business, and it leaves out the cost of implementing the requirements. Your cost depends on your gaps and whether you hire help."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there an assessor fee for Level 1?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No outside assessor is involved at Level 1. Your company assesses itself and affirms the result in SPRS."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the yearly renewal cost as much as the first year?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "With Onyx, no. The yearly renewal is $750, compared with $3,500 to $4,500 for setup, because the policies and evidence binder already exist."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the $495 readiness check wasted if we sign up for setup?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. It's credited in full toward the Level 1 setup."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is Level 2 so much more expensive?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Level 2 covers the 110 controls in NIST SP 800-171 for companies handling CUI, compared with 15 requirements at Level 1."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><i></i>ONYX</a>
+  <nav><a href="/#why">Why it matters</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#checklist">Checklist</a><a href="/#faq">FAQ</a></nav>
+  <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a fit check</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Cost</div>
+  <h1 style="max-width:20ch">What CMMC Level 1 costs a small shop</h1>
+  <p class="lead">Level 1 is the least expensive CMMC level because you assess yourself. What you actually spend depends on how close you already are to the 15 requirements.</p>
+  
+  <div class="ctas">
+    <a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a>
+    <a class="btn ghost" href="/#pricing">See pricing</a>
+  </div>
+</div></div>
+
+<section><div class="wrap" style="max-width:820px">
+<h2>The short answer</h2>
+<p>There's no outside assessor at Level 1, so there's no assessor fee. Your costs are your own time, any fixes you need, and outside help if you hire it.</p>
+<p>DoD published its own estimate in the final CMMC program rule on October 15, 2024. As summarized by Greenberg Traurig, DoD estimated about <b>$6,000 for a small business's Level 1 self-assessment</b> and about <b>$560 for the annual affirmation</b>. Those figures cover the assessment and affirmation work. DoD didn't count the cost of implementing the security requirements themselves, because those were already required by earlier FAR and DFARS clauses. So if you have gaps to close, that's extra.</p>
+
+<h2>Three ways to do it</h2>
+<p>We won't quote other firms' prices. Here's how the three routes compare in general terms.</p>
+<div class="grid g3" style="margin:18px 0 8px">
+  <div class="card"><h3>Do it yourself</h3><p>Lowest cash cost. You read the requirements, gather evidence, write policies and enter the result in SPRS. The real cost is hours, and the risk that your affirmation isn't backed by proof.</p></div>
+  <div class="card"><h3>Consultant</h3><p>A one-time project to assess, document and prepare the affirmation. Pricing varies by firm and may be fixed or hourly. Ask whether IT work is included.</p></div>
+  <div class="card"><h3>Managed service provider</h3><p>An ongoing monthly IT service that can run the technical controls, like patching and antivirus. Whether it includes the written policies, evidence and affirmation varies, so ask.</p></div>
+</div>
+<p>Many small shops end up mixing these: their existing IT handles the technical settings, and someone handles the paperwork. Whichever route you pick, get the scope and price in writing.</p>
+
+<h2>What drives the cost</h2>
+<ul>
+  <li><b>Headcount and devices.</b> More people and laptops means more accounts, more settings and more evidence.</li>
+  <li><b>Scope.</b> If FCI is spread across every system you use, everything is in scope. Keeping it in fewer places can shrink the work.</li>
+  <li><b>Your starting point.</b> If antivirus, updates, a firewall and individual logins are already in place, most of the work is documentation.</li>
+  <li><b>Written policies.</b> Starting from zero takes longer than updating what you have.</li>
+  <li><b>Physical setup.</b> Multiple locations mean more doors, keys and visitor logs.</li>
+  <li><b>Fixes that need purchases.</b> A missing firewall or antivirus product is a real cost the DoD estimate leaves out.</li>
+  <li><b>CUI.</b> If you receive Controlled Unclassified Information, you're likely looking at Level 2, which covers 110 NIST SP 800-171 controls and costs more.</li>
+</ul>
+
+<h2>Free routes first</h2>
+<p>Before paying anyone, use what's free. The clause text is public at acquisition.gov, and DoD publishes Level 1 guidance, including an assessment guide and a scoping guide, through its CMMC program. Our <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> is free too. If you can do it yourself and back every answer with evidence, you may not need us.</p>
+
+<h2>Onyx pricing</h2>
+<p>Fixed prices, agreed up front, no hourly billing:</p>
+<div class="tablewrap" style="margin:14px 0"><table>
+  <thead><tr><th>#</th><th>Service</th><th>Price</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Readiness check: where you stand on all 15 requirements, with a written gap list</td><td>$495, credited in full toward setup</td></tr>
+    <tr><td>2</td><td>Level 1 setup: written policies, evidence binder, guided SPRS affirmation, about 21 days</td><td>$3,500 for 1–10 people<br>$4,500 for 11–25 people</td></tr>
+    <tr><td>3</td><td>Yearly renewal: annual re-assessment, binder update and affirmation</td><td>$750 / year</td></tr>
+  </tbody>
+</table></div>
+<p>We handle the written side. If a gap needs new hardware, software or IT work, that's done by your IT person or provider and isn't in our price. You keep everything we build. <a href="/#pricing">See pricing on the home page</a>.</p>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+  <div class="eyebrow">FAQ</div>
+  <h2>Common questions</h2>
+  <details><summary>Is DoD's $6,000 estimate what we'll pay?</summary><p>Not necessarily. It's DoD's estimate of the assessment work for a small business, and it leaves out the cost of implementing the requirements. Your cost depends on your gaps and whether you hire help.</p></details>
+  <details><summary>Is there an assessor fee for Level 1?</summary><p>No outside assessor is involved at Level 1. Your company assesses itself and affirms the result in SPRS.</p></details>
+  <details><summary>Does the yearly renewal cost as much as the first year?</summary><p>With Onyx, no. The yearly renewal is $750, compared with $3,500 to $4,500 for setup, because the policies and evidence binder already exist.</p></details>
+  <details><summary>Is the $495 readiness check wasted if we sign up for setup?</summary><p>No. It's credited in full toward the Level 1 setup.</p></details>
+  <details><summary>Why is Level 2 so much more expensive?</summary><p>Level 2 covers the 110 controls in NIST SP 800-171 for companies handling CUI, compared with 15 requirements at Level 1.</p></details>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+  <h2>Find out where you stand in 20 minutes.</h2>
+  <p class="sub" style="margin:0 auto 28px">Free, no obligation. If you're already covered, we'll tell you.</p>
+  <div class="ctas"><a class="btn" href="https://calendar.app.google/ubBg99S3piYL8Ur68">Book a free 20-minute fit check</a><a class="btn ghost" href="/#pricing">See pricing</a></div>
+</div></section>
+
+<section style="padding:48px 0"><div class="wrap" style="max-width:820px">
+  <h2 style="font-size:24px">Sources</h2>
+  <ul class="note" style="padding-left:18px">
+    <li><a href="https://gtlaw.com/en/insights/2025/10/recapping-cmmc-level-1-considerations-for-government-contractors">Greenberg Traurig, Recapping CMMC Level 1 considerations (Oct 2025)</a></li>
+    <li><a href="https://defensescoop.com/2023/12/28/cmmc-implementation-cost-estimates/">DefenseScoop, CMMC implementation cost estimates (Dec 2023)</a></li>
+    <li><a href="https://hklaw.com/en/insights/publications/2024/10/fifteen-key-takeaways-from-the-final-cmmc-program-rule-issued-by-dod">Holland &amp; Knight, Fifteen key takeaways from the final CMMC program rule (Oct 2024)</a></li>
+    <li><a href="https://www.acquisition.gov/far/52.204-21">FAR 52.204-21, Basic Safeguarding of Covered Contractor Information Systems (acquisition.gov)</a></li>
+    <li><a href="https://dodcio.defense.gov/CMMC/about">DoD CIO, About CMMC</a></li>
+    <li><a href="https://www.mwe.com/?p=263508">McDermott Will &amp; Emery, CMMC from the bottom up: Level 1</a></li>
+    <li><a href="https://www.morganlewis.com/pubs/2026/07/department-of-war-suspends-cmmc-phase-ii-requirements-but-cybersecurity-obligations-remain">Morgan Lewis, DoW suspends CMMC Phase II, but cybersecurity obligations remain (July 2026)</a></li>
+  </ul>
+  <p class="note">General information, not legal advice. Back to <a href="/">Onyx home</a>.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div><b style="color:var(--text);letter-spacing:.14em">ONYX</b><br>CMMC Level 1 readiness for Virginia defense subcontractors.<br>Onyx is a trade name of ETaye LLC.</div>
+  <div>Ezra Taye<br><a href="tel:+17033002469">703-300-2469</a> · <a href="mailto:ezra@onyxcmmc.com">ezra@onyxcmmc.com</a><br>3100 Clarendon Blvd, Arlington, VA 22201</div>
+</div>
+<div class="wrap note">Guides: <a href="/cmmc-level-1-self-assessment/">Level 1 self-assessment</a> · <a href="/far-52-204-21-checklist/">FAR 52.204-21 checklist</a> · <a href="/sprs-level-1-affirmation/">SPRS affirmation</a> · <a href="/cmmc-level-1-cost/">Level 1 cost</a> · <a href="/cmmc-status-2026/">CMMC status 2026</a></div>
+</footer>
+</body>
+</html>
