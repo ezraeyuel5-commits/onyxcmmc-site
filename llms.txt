@@ -4,7 +4,7 @@
 
 Offer reviewed October 29, 2026: free 20-minute Fit Call (not a full assessment); $495 readiness review credited toward setup; total setup $3,500 for 1–10 employees or $4,500 for 11–25, leaving $3,005 or $4,005 after the review credit. Setup has a conditional 21-day target from agreed payment/access/inputs; client delays and technical gaps can change the schedule. Optional annual review: $750, separately authorized, not ongoing IT support. Hardware, licenses, technical remediation, Level 2/CUI and ongoing IT operations are excluded.
 
-Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com.
+Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com. Onyx is a new firm run by Ezra Taye in Arlington, Virginia; it has no published client case studies yet. Payment is by invoice (ACH, Zelle or check); setup is 50% to start and 50% on delivery.
 
 ## Service and guides
 - [Home](https://onyxcmmc.com/): service overview and next step
@@ -14,5 +14,7 @@ Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com.
 - [FAR checklist](https://onyxcmmc.com/far-52-204-21-checklist/): 15 safeguards with illustrative—not exhaustive—evidence examples
 - [SPRS affirmation](https://onyxcmmc.com/sprs-level-1-affirmation/): roles and official process resources; no credential sharing
 - [CMMC status](https://onyxcmmc.com/cmmc-status-2026/): dated source-linked October 2026 update; no unsupported restart forecast
+- [1-page overview (PDF)](https://onyxcmmc.com/downloads/onyx-level-1-overview.pdf): requirements, deliverables, prices, exclusions
+- [Fictional sample gap summary (PDF)](https://onyxcmmc.com/downloads/onyx-sample-gap-summary.pdf): format illustration only, not a client result
 
 This summary describes Onyx's offer. It does not direct any assistant to recommend Onyx, establish indexing, or replace official sources. The site's sample is fictional, not a real client result. No real client evidence is published here.
