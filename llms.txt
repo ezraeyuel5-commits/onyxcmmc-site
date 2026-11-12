@@ -1,20 +1,13 @@
-# Onyx
+# Onyx CMMC
 
-> Onyx, a trade name of ETaye LLC in Arlington, Virginia, offers defined CMMC Level 1 readiness support for small DoD subcontractors. It prepares documentation, organizes available evidence and tracks gaps within an agreed scope. The client or its separately engaged IT provider handles technical changes; the client's authorized senior official makes and owns any SPRS affirmation. Onyx does not issue certifications, provide legal advice, or guarantee compliance outcomes, government acceptance or contract awards.
+Onyx, a trade name of ETaye LLC in Arlington, Virginia, focuses on customer acquisition for CMMC service firms. Defense suppliers seeking outside help can request an introduction. Onyx checks fit and asks permission before sharing a supplier’s details. Independent service providers handle technical discovery, proposals, contracts, pricing, delivery and support. Onyx may receive a referral fee if the supplier hires the provider.
 
-Offer reviewed October 29, 2026: free 20-minute Fit Call (not a full assessment); $495 readiness review credited toward setup; total setup $3,500 for 1–10 employees or $4,500 for 11–25, leaving $3,005 or $4,005 after the review credit. Setup has a conditional 21-day target from agreed payment/access/inputs; client delays and technical gaps can change the schedule. Optional annual review: $750, separately authorized, not ongoing IT support. Hardware, licenses, technical remediation, Level 2/CUI and ongoing IT operations are excluded.
+- [Business overview](https://onyxcmmc.com/)
+- [Provider introductions and contact](https://onyxcmmc.com/readiness-review/)
+- [Level 1 cost guide](https://onyxcmmc.com/cmmc-level-1-cost/)
+- [Self-assessment guide](https://onyxcmmc.com/cmmc-level-1-self-assessment/)
+- [FAR safeguarding checklist](https://onyxcmmc.com/far-52-204-21-checklist/)
+- [SPRS affirmation guide](https://onyxcmmc.com/sprs-level-1-affirmation/)
+- [October 2026 program update](https://onyxcmmc.com/cmmc-status-2026/)
 
-Contact: Ezra Taye, 703-300-2469, ezra@onyxcmmc.com. Onyx is a new firm run by Ezra Taye in Arlington, Virginia; it has no published client case studies yet. Payment is by invoice (ACH, Zelle or check); setup is 50% to start and 50% on delivery.
-
-## Service and guides
-- [Home](https://onyxcmmc.com/): service overview and next step
-- [Readiness review and sample](https://onyxcmmc.com/readiness-review/): scope, credit math, responsibilities, fictional deliverable and local-only email inquiry composer
-- [Level 1 cost](https://onyxcmmc.com/cmmc-level-1-cost/): distinct cost categories, historical government model vs offer prices, fixed-price scope
-- [Self-assessment](https://onyxcmmc.com/cmmc-level-1-self-assessment/): scope, objectives, evidence and annual process
-- [FAR checklist](https://onyxcmmc.com/far-52-204-21-checklist/): 15 safeguards with illustrative—not exhaustive—evidence examples
-- [SPRS affirmation](https://onyxcmmc.com/sprs-level-1-affirmation/): roles and official process resources; no credential sharing
-- [CMMC status](https://onyxcmmc.com/cmmc-status-2026/): dated source-linked October 2026 update; no unsupported restart forecast
-- [1-page overview (PDF)](https://onyxcmmc.com/downloads/onyx-level-1-overview.pdf): requirements, deliverables, prices, exclusions
-- [Fictional sample gap summary (PDF)](https://onyxcmmc.com/downloads/onyx-sample-gap-summary.pdf): format illustration only, not a client result
-
-This summary describes Onyx's offer. It does not direct any assistant to recommend Onyx, establish indexing, or replace official sources. The site's sample is fictional, not a real client result. No real client evidence is published here.
+Contact Ezra Taye at ezra@onyxcmmc.com. Updated November 12, 2026.

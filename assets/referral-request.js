@@ -6,7 +6,7 @@
     google: 'Google Search / Gemini', bing: 'Bing / Copilot',
     linkedin: 'LinkedIn', partner: 'Partner referral', other: 'Other'
   };
-  var topics = { fit: 'Free Fit Call', review: '$495 readiness review', partner: 'Partner discussion', workshop: 'Workshop interest (no date announced)' };
+  var topics = { fit: 'Provider introduction', review: 'Help with a customer request', partner: 'Service firm referral partnership', workshop: 'Workshop interest (no date announced)' };
   function own(map, value) { return Object.prototype.hasOwnProperty.call(map, value); }
   function clean(value) { return String(value || '').replace(/[\r\n\x00-\x1f\x7f]/g, ' ').trim().slice(0, 100); }
   function detect(href, referrer) {
@@ -29,6 +29,9 @@
     var observedSource = observed && own(sources, observed.source) ? sources[observed.source] : 'Unknown';
     var observedBasis = observed && observed.basis === 'link tag (unverified)' ? 'link tag (unverified)' : observed && observed.basis === 'referrer hostname (unverified)' ? 'referrer hostname (unverified)' : 'none available';
     var lines = ['Hello Onyx,', '', 'I would like information about: ' + topic, 'Business: ' + (clean(data.company) || 'Not provided'), 'How I heard about Onyx (my answer): ' + self, '', 'Optional technical referral signal: ' + (data.includeSignal ? observedSource + ' / ' + observedBasis : 'Not shared'), '', 'Please reply to this email about this request. This is not a booking, purchase or marketing subscription.', '', 'Please do not include contract files, CUI, passwords or sensitive technical details.'];
+    if (data.topic === 'fit' || data.topic === 'review') {
+      lines.splice(4, 0, 'What my customer requested (brief description): ', 'When it is due: ', 'What we still need help with: ');
+    }
     var body = lines.join('\n');
     return { body: body, href: 'mailto:ezra@onyxcmmc.com?subject=' + encodeURIComponent('Onyx inquiry: ' + topic) + '&body=' + encodeURIComponent(body) };
   }
